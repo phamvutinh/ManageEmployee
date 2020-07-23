@@ -8,7 +8,7 @@ import sheetsAPi from "api/sheetsAPi";
 
 function App() {
   React.useEffect(() => {
-    fetchHandle();
+    // fetchHandle();
   }, []);
 
   const fetchHandle = async () => {

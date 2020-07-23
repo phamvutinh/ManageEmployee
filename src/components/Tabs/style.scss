@@ -1,0 +1,17 @@
+.ant-tabs-nav-list {
+  width: 100%;
+  .ant-tabs-tab {
+    text-align: center;
+    width: 50%;
+    margin: 0;
+    .ant-tabs-tab-btn {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+.tab {
+  &__content {
+    padding: 0 0.5rem;
+  }
+}

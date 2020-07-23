@@ -1,0 +1,32 @@
+@import "assets/style/variables";
+
+.employee {
+  padding-left: 1.5rem;
+  border-left: 2px solid $primary;
+  margin-bottom: 1rem;
+  position: relative;
+  span {
+    margin-right: 0.5rem;
+    color: $primary;
+    font-weight: bold;
+  }
+  &__call {
+    float: right;
+    font-size: 2rem;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__text {
+    margin: 0;
+    font-weight: 600;
+  }
+  &__position {
+    font-weight: bold;
+    color: $primary;
+  }
+  &__name {
+    font-weight: 600;
+  }
+}
