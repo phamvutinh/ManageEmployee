@@ -23,7 +23,7 @@ export default function Login({ history }) {
       <div className="Login__container">
         <h2>Sign In With</h2>
         <GoogleLogin
-          clientId={constants.clientId}
+          clientId={constants.CLIENT_ID}
           buttonText="Google"
           onSuccess={onSuccess}
           onFailure={onFailure}
