@@ -21,10 +21,15 @@ export default function Login({ history }) {
   return (
     <div className="Login">
       <div className="Login__container">
-        <h2>Sign In With</h2>
+        <h2>
+          Welcome to{" "}
+          <span style={{ display: "block" }}>Manage Employee App</span>
+        </h2>
         <GoogleLogin
+          className="Login__button"
+          style={{ fontWeight: "bold" }}
           clientId={constants.CLIENT_ID}
-          buttonText="Google"
+          buttonText="Login with Google"
           onSuccess={onSuccess}
           onFailure={onFailure}
         />

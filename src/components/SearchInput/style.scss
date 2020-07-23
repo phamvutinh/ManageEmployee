@@ -1,0 +1,43 @@
+@import "assets/style/variables";
+
+.search {
+  background-color: $primary;
+  padding: 0.75rem 0.5rem;
+  display: flex;
+  &__wrapper {
+    position: relative;
+    width: 100%;
+  }
+  &__input {
+    height: 100%;
+    padding: 0.5rem;
+    outline: none;
+    width: calc(100% - 2.5rem);
+    border-radius: 1px;
+    box-shadow: none;
+    border: 0;
+    padding-left: 1rem;
+  }
+  &__button {
+    cursor: pointer;
+    background-color: $secondary;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(-50%);
+    border: 0;
+    width: 2.5rem;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      font-weight: 600;
+      color: #fff;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}

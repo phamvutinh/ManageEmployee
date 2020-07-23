@@ -9,12 +9,18 @@
   &__container {
     text-align: center;
     margin: 0 auto;
-    border: 1px solid #fff;
     padding: 3rem;
     border-radius: 1px;
     h2 {
       color: #fff;
       margin-bottom: 1rem;
+    }
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    div {
+      display: flex;
     }
   }
 }
