@@ -7,12 +7,13 @@ import { useGoogleLogout } from "react-google-login";
 import "./style.scss";
 import constants from "utils/constants";
 
-export default function AvatarComponent({ ...rest }) {
+function AvatarComponent({ ...rest }) {
   const history = useHistory();
   const { signOut } = useGoogleLogout({
     jsSrc: "https://apis.google.com/js/api.js",
     clientId: constants.CLIENT_ID,
   });
+
   const images = JSON.parse(sessionStorage.getItem("userData"));
 
   const signOutHandle = (e) => {
@@ -41,3 +42,5 @@ export default function AvatarComponent({ ...rest }) {
     </div>
   );
 }
+
+export default React.memo(AvatarComponent);

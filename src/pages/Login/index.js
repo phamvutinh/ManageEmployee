@@ -21,8 +21,8 @@ export default function Login({ history }) {
   return (
     <div className="Login">
       <div className="Login__container">
-        <h2>
-          Welcome to{" "}
+        <h2 className="Login__title">
+          Welcome to
           <span style={{ display: "block" }}>Manage Employee App</span>
         </h2>
         <GoogleLogin
