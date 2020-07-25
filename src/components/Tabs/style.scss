@@ -5,13 +5,15 @@
     width: 50%;
     margin: 0;
     .ant-tabs-tab-btn {
-      text-align: center;
       width: 100%;
+      text-align: center;
+      font-weight: bold !important;
     }
   }
 }
+
 .tab {
   &__content {
-    padding: 0 0.5rem;
+    padding: 0 0.75rem;
   }
 }

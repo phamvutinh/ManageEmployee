@@ -3,6 +3,7 @@
 .search {
   background-color: $primary;
   padding: 0.75rem 0.5rem;
+  transition: 0.3s all ease-in-out;
   display: flex;
   &__wrapper {
     position: relative;

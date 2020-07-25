@@ -6,6 +6,13 @@
   align-items: center;
   min-height: 100vh;
   background-color: $primary;
+  &__title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    span {
+      font-size: 2rem;
+    }
+  }
   &__container {
     text-align: center;
     margin: 0 auto;
