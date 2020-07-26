@@ -1,18 +1,16 @@
 import React from "react";
-import Login from "pages/Login";
-import ErrorPage from "pages/Error";
 import { PrivateRoute } from "components";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Manage from "pages/Manage";
+import Routes from "config/routes";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
-          <PrivateRoute path="/" exact component={Manage} />
-          <Route path="/login" exact component={Login} />
-          <Route component={ErrorPage} />
+          {Routes.map((route) =>
+            route.private ? <PrivateRoute {...route} /> : <Route {...route} />
+          )}
         </Switch>
       </Router>
     </div>
