@@ -1,5 +1,6 @@
 import React from "react";
 import { Menu, Dropdown, Button } from "antd";
+import PropTypes from "prop-types";
 import "./style.scss";
 
 function DropDown({ initValue, listDropdown, onClick, ...rest }) {
@@ -37,5 +38,15 @@ function DropDown({ initValue, listDropdown, onClick, ...rest }) {
     </Dropdown>
   );
 }
+
+DropDown.propTypes = {
+  initValue: PropTypes.string,
+  listDropdown: PropTypes.arrayOf(PropTypes.shape({})),
+};
+
+DropDown.defaultProps = {
+  initValue: "All",
+  listDropdown: [],
+};
 
 export default DropDown;

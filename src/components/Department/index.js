@@ -1,5 +1,6 @@
 import React from "react";
 import { UsergroupAddOutlined } from "@ant-design/icons";
+import PropTypes from "prop-types";
 import "./style.scss";
 
 export default function Department({ onClick, content }) {
@@ -18,3 +19,12 @@ export default function Department({ onClick, content }) {
     </div>
   );
 }
+
+Department.propTypes = {
+  onClick: PropTypes.func,
+  content: PropTypes.shape({}),
+};
+Department.defaultProps = {
+  onClick: null,
+  content: {},
+};

@@ -1,11 +1,11 @@
 import React from "react";
 import { Empty } from "antd";
+import PropTypes from "prop-types";
 import { Employee, Dropdown } from "components";
 
 export default function EmployeeList({
   departments,
   initValue,
-  clearFilter,
   dropdownHandle,
   employees,
 }) {
@@ -24,3 +24,17 @@ export default function EmployeeList({
     <Empty />
   );
 }
+
+EmployeeList.propTypes = {
+  departments: PropTypes.array,
+  employees: PropTypes.array,
+  initValue: PropTypes.string,
+  dropdownHandle: PropTypes.func,
+};
+
+EmployeeList.defaultProps = {
+  departments: [],
+  employees: [],
+  initValue: "All",
+  dropdownHandle: null,
+};

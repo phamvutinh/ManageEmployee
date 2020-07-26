@@ -26,7 +26,7 @@ function AvatarComponent({ ...rest }) {
   const menu = (
     <Menu>
       <Menu.Item>
-        <span onClick={signOutHandle} rel="noopener noreferrer">
+        <span onClick={signOutHandle}>
           <LogoutOutlined style={{ marginRight: "0.5rem" }} />
           Logout
         </span>
