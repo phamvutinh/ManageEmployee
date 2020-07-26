@@ -1,5 +1,6 @@
 import React from "react";
 import { PhoneOutlined, MailOutlined, PhoneTwoTone } from "@ant-design/icons";
+import PropTypes from "prop-types";
 import "./style.scss";
 
 function Employee({ content }) {
@@ -26,4 +27,11 @@ function Employee({ content }) {
     </div>
   );
 }
+Employee.propTypes = {
+  content: PropTypes.arrayOf(PropTypes.string),
+};
+
+Employee.defaultProps = {
+  content: [].fill("", 0, 7),
+};
 export default React.memo(Employee);

@@ -9,6 +9,7 @@ import {
 import Tab from "components/Tabs";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import PropTypes from "prop-types";
 import { Loading } from "components";
 import {
   fetchEmployees,
@@ -24,7 +25,6 @@ function WrapperTab({
   activeTab,
   fetchEmployees,
   changeActiveTab,
-  filterDepartments,
   setDepartmentSearch,
   departmentSearch,
   clearFilter,
@@ -79,4 +79,16 @@ const mapDispatchToProps = (dispatch) =>
     dispatch
   );
 
+WrapperTab.propTypes = {
+  employees: PropTypes.array,
+  departments: PropTypes.array,
+  pending: PropTypes.bool,
+  activeTab: PropTypes.string,
+  fetchEmployees: PropTypes.func,
+  changeActiveTab: PropTypes.func,
+  filterDepartments: PropTypes.func,
+  setDepartmentSearch: PropTypes.func,
+  departmentSearch: PropTypes.string,
+  clearFilter: PropTypes.func,
+};
 export default connect(mapStateToProps, mapDispatchToProps)(WrapperTab);

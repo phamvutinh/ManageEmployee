@@ -4,6 +4,7 @@ import { bindActionCreators } from "redux";
 import { getDepartmentSearch } from "reducers/reducer";
 import { connect } from "react-redux";
 import { useDebounce } from "hooks";
+import PropTypes from "prop-types";
 import searchEmployee from "./searchEmployee";
 import "./style.scss";
 
@@ -33,7 +34,7 @@ function SearchInput({ filterEmployees, valueDepartment, ...rest }) {
   };
 
   React.useEffect(() => {
-    if (debouncedSearchTerm) {
+    if (debouncedSearchTerm && filterEmployees) {
       filterEmployees(value, valueDepartment);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -62,12 +63,23 @@ const mapStateToProps = (state) => ({
   valueDepartment: getDepartmentSearch(state),
 });
 
-const mapDispatchToProps = (dispatch) =>
-  bindActionCreators(
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators(
     {
       filterEmployees: searchEmployee,
     },
     dispatch
   );
+};
+
+SearchInput.propTypes = {
+  filterEmployees: PropTypes.func,
+  valueDepartment: PropTypes.string,
+};
+
+SearchInput.defaultProps = {
+  filterEmployees: null,
+  valueDepartment: "",
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchInput);
